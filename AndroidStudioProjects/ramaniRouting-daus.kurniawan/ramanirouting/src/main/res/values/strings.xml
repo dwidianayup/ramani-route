@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ramani Routing</string>
+    <string name="please_wait">Please wait..</string>
+    <string name="start_point">Start Point</string>
+    <string name="your_location">Your Location</string>
+    <string name="select_on_map">Select On Map</string>
+    <string name="search_address">Search Address</string>
+    <string name="location_null">Location null</string>
+    <string name="end_point">End Point</string>
+    <string name="by_car">By Car</string>
+    <string name="by_bike">By Bike</string>
+    <string name="by_foot">By Foot</string>
+    <string name="start_point_still_empty">Start Point still empty</string>
+    <string name="end_point_still_empty">End Point still empty</string>
+</resources>

@@ -1,0 +1,22 @@
+variables:
+ GIT_SSL_NO_VERIFY: "1"
+ APP: "RamaniRouting"
+ NAME: "$APP-$CI_BUILD_REF_NAME-$CI_BUILD_ID.apk"
+before_script:
+ - export ANDROID_HOME="/opt/android-sdk-linux"
+ - export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+ - export ANDROID_NDK_HOME="/opt/android-sdk-linux/ndk-bundle"
+ramanirouting:
+ script:
+   - ./gradlew clean assembleDebug --parallel
+   - mv app/build/outputs/apk/app-debug.apk $NAME
+   - sudo cp $NAME /var/www/html/ramanirouting/build/$NAME
+   - sudo cp $NAME /mnt/s3-www/html/ramanirouting/build/$NAME
+ only:
+   - alpha
+   - beta
+   - stable
+ artifacts:
+   untracked: false
+   paths:
+      - $NAME

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/searchview_header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:elevation="8dp"
+            android:background="@color/blue_a400">
+
+            <ImageView
+                android:id="@+id/close_button_search"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:layout_alignBottom="@+id/searchview_column"
+                android:layout_alignTop="@+id/searchview_column"
+                android:src="@drawable/btn_back_arrow" />
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchview_column"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="20dp"
+                android:iconifiedByDefault="false"
+                android:searchIcon="@null"
+                android:searchHintIcon="@null"
+                android:layout_toEndOf="@+id/close_button_search"
+                android:layout_toRightOf="@+id/close_button_search"
+                android:background="@color/blue_a400"
+                android:queryHint="Search Address"
+                app:queryHint="Search Address"
+                app:defaultQueryHint="Search Address">
+
+            </android.support.v7.widget.SearchView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchview_header"
+
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/listView_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="#000000"
+                    android:dividerHeight="0dp"
+                    android:minHeight="400dp"
+                    android:visibility="visible"
+                    tools:listitem="@layout/search_view_item">
+
+                </ListView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+            <TextView
+                android:id="@+id/text_no_data_searchaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="No Data"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

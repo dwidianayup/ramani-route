@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/direction_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/primary_blue"
+            android:elevation="4dp"
+            android:padding="2dp">
+
+            <LinearLayout
+                android:id="@+id/close_directions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/buttonshape_white"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingRight="3dp"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
+                >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:src="@android:drawable/ic_delete" />
+            </LinearLayout>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/start_simulations"-->
+            <!--android:layout_toLeftOf="@+id/start_navigations"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@android:drawable/ic_menu_slideshow"/>-->
+            <LinearLayout
+                android:id="@+id/start_navigations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/buttonshape_white"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:layout_margin="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
+                android:padding="3dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:src="@drawable/navigation_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="START"
+                    android:textColor="@color/primary_blue_dark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="2dp"
+                android:layout_toLeftOf="@+id/start_navigations"
+                android:layout_toStartOf="@+id/start_navigations"
+                android:layout_toRightOf="@+id/close_directions"
+                android:layout_toEndOf="@+id/close_directions"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_distance_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:singleLine="true"
+                        android:scrollHorizontally="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit ="marquee_forever"
+                        android:text="12 Hours (350 m)"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_details_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="Fastest route by car"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listview_directions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/direction_bottom_view"
+            android:background="@android:color/white"
+            android:divider="#000000"
+            android:dividerHeight="0dp"
+            android:visibility="visible"
+            tools:listitem="@layout/directions_layout_item" />
+        <android.support.design.widget.FloatingActionButton
+
+            android:id="@+id/start_simulations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_blue"
+            android:src="@android:drawable/ic_media_play"
+            android:layout_below="@+id/direction_bottom_view"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

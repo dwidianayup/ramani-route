@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="manuver">
+        <item>empty</item>
+        <item>continue</item>
+        <item>continue</item>
+        <item>slight_left</item>
+        <item>turn_left</item>
+        <item>sharp_left</item>
+        <item>slight_right</item>
+        <item>turn_right</item>
+        <item>sharp_right</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>continue</item>
+        <item>u_turn</item>
+        <item>u_turn</item>
+        <item>u_turn</item>
+        <item>slight_left</item>
+        <item>slight_right</item>
+        <item>slight_left</item>
+        <item>slight_right</item>
+        <item>continue</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>arrived</item>
+        <item>arrived</item>
+        <item>arrived</item>
+        <item>round_about</item>
+        <item>round_about</item>
+        <item>round_about</item>
+        <item>round_about</item>
+        <item>round_about</item>
+        <item>round_about</item>
+        <item>round_about</item>
+        <item>round_about</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>empty</item>
+    </string-array>
+
+</resources>

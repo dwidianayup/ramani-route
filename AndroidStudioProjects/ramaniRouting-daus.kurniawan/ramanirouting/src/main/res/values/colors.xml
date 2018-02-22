@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_a400">#64c1ff</color>
+    <color name="primary_blue">#0091EA</color>
+    <color name="primary_blue_dark">#0064b7</color>
+    <color name="primary_accent">#bebebe</color>
+</resources>
